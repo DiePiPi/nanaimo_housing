@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<head>
+<title>Hello world!</title>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+
+<style>
+/*
+pale gold	#c08283
+silk		#dcd0c0
+paper		#f4f4f4
+charcoal	#373737
+*/
+	
+body, html {
+	background-color:#373737;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("https://s3-us-west-2.amazonaws.com/visolutions/housing/media/image/bg.jpg");
+
+    /* Full height */
+    height: 50%;
+    margin: 0px;
+    padding:0px;
+    opacity: 0.65;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg_title {
+	font-size:36px;
+	color:#ffffff;
+	text-align: center;
+	width:300px;
+	position:relative;
+	top:40%;
+	margin:auto;
+	padding:5px;
+	border-radius: 10px;
+	background-color:#c08283;
+    opacity: 0.8;
+	}
+.bg_title:hover{
+	opacity: 1;
+	cursor: pointer;
+}
+
+/* tabs */
+.tabframe {
+	width: 510px;
+	min-width:510px;
+	margin: 0 auto 0 auto;
+}
+.tabs, .tabs_selected{
+	font-size:20px;
+	color:#ffffff;
+	text-align: center;
+	float: left;
+	width: 150px;
+	height: 30px;
+	margin: 10px;
+	border-radius: 10px;
+	background-color: #dcd0c0;
+	transform: translateY(-50px);
+	padding:10px 0px;
+}
+.tabs:hover, .tabs_selected{
+	color:#373737;
+	background-color: #f4f4f4;
+	cursor: pointer;
+	box-shadow: 0px -3px 4px 3px #888888;
+}
+ /* content show and hide*/
+.content {
+	clear:left;
+	width:100%;
+	transform: translateY(-70px);
+	background-color:#373737;
+}
+.content_hide {
+	display:none;
+}
+.content_show {
+	width:100%;
+	padding:10px;
+	display:block;
+	text-align: center;
+	background-color:#f4f4f4;
+}
+
+/* info tab show */
+.work_exp{
+	color:#373737;
+	width:24%;
+	display: inline-block;
+	background-color:#f4f4f4;
+	vertical-align:top;
+}
+.work_exp img {
+	width:100%;
+	max-width:350px;
+}
+
+.big_title {
+	font-size:30px;
+}
+.small_title {
+	font-size:20px;
+}
+
+.about_butt a:link, .about_butt a:visited {
+	margin:auto;
+	font-size:36px;
+	color:#ffffff;
+	text-align: center;
+    text-decoration: none;
+	margin:auto;
+	padding:5px;
+	border-radius: 10px;
+	background-color:#c08283;
+    opacity: 0.8;
+}
+.about_butt a:hover, .about_butt a:active{
+	opacity: 1;
+	cursor: pointer;
+}
+
+.bott {
+	color:#ffffff;
+	width:100%;
+	transform: translateY(-70px);
+	background-color:#373737;
+	clear:left;
+}
+
+
+/*           social net work icon          */
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+.bott {
+    color: #FFF;
+}
+.bott a {
+    text-decoration: none;
+    color: #fff;
+}
+.bott p > a:hover{
+    color: #d9d9d9;
+    text-decoration:  underline;
+}
+
+._12 {
+    font-size: 1.2em;
+}
+._14 {
+    font-size: 1.4em;
+}
+ul {
+    padding:0;
+    list-style: none;
+}
+.footer-social-icons {
+    width: 260px;
+    display:block;
+    margin: 0 auto;
+}
+.social-icon {
+    color: #fff;
+}
+ul.social-icons {
+    margin-top: 10px;
+}
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+    height: 100px;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+.fa-facebook {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-facebook:hover {
+    background-color: #3d5b99;
+}
+.fa-twitter {
+    padding:10px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-twitter:hover {
+    background-color: #00aced;
+}
+.fa-rss {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-rss:hover {
+    background-color: #eb8231;
+}
+.fa-youtube {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-youtube:hover {
+    background-color: #e64a41;
+}
+.fa-linkedin {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-linkedin:hover {
+    background-color: #0073a4;
+}
+.fa-google-plus {
+    padding:10px 9px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-google-plus:hover {
+    background-color: #e25714;
+}
+
+
+/* cellphone */
+@media screen and (max-width: 650px){
+    .tabs, .tabs_selected {
+		float: none;
+		width:95%;
+		transform: translateY(0px);
+		
+	}
+    .tabframe {
+		width: 100%;
+		min-width:100px;
+		height:auto;
+	}
+	.content {
+		width: 100%;
+		clear:left;
+		transform: translateY(0px);
+	}
+	.bott {
+		clear:left;
+		transform: translateY(0px);
+	}
+	.work_exp{
+		display: block;
+		width:100%;
+	}
+}
+</style>
+
+<script>
+	function click_intro(){
+		document.getElementById('intro_tab').setAttribute('class','tabs_selected');
+		document.getElementById('start_using_tab').setAttribute('class','tabs');
+		document.getElementById('info_tab').setAttribute('class','tabs');
+		
+		document.getElementById('intro').setAttribute('class','content_show');
+		document.getElementById('start_using').setAttribute('class','content_hide');
+		document.getElementById('info').setAttribute('class','content_hide');
+		}
+	function click_start_using(){
+		document.getElementById('intro_tab').setAttribute('class','tabs');
+		document.getElementById('start_using_tab').setAttribute('class','tabs_selected');
+		document.getElementById('info_tab').setAttribute('class','tabs');
+		
+		document.getElementById('intro').setAttribute('class','content_hide');
+		document.getElementById('start_using').setAttribute('class','content_show');
+		document.getElementById('info').setAttribute('class','content_hide');
+		}
+	function click_info(){
+		document.getElementById('intro_tab').setAttribute('class','tabs');
+		document.getElementById('start_using_tab').setAttribute('class','tabs');
+		document.getElementById('info_tab').setAttribute('class','tabs_selected');
+		
+		document.getElementById('intro').setAttribute('class','content_hide');
+		document.getElementById('start_using').setAttribute('class','content_hide');
+		document.getElementById('info').setAttribute('class','content_show');
+		}
+</script>
+
+</head>
+
+<body>
+	<!-- background picture -->
+	<div class='bg'>
+		<div class='bg_title'>
+			NANAIMO HOUSING
+		</div>
+	</div>
+	
+	<!-- navigator tabs -->
+	<div class='tabframe'>
+		<div id='intro_tab' class='tabs_selected' onclick='click_intro();'>
+			Intro
+		</div>
+		<div id='start_using_tab' class='tabs' onclick='click_start_using();'>
+			Start Using
+		</div>
+		<div id='info_tab' class='tabs' onclick='click_info();'>
+			About
+		</div>
+	</div>
+	
+	<!-- content -->
+	<div id='content' class='content'>
+		<div id='intro' class='content_show'>
+			<div class='work_exp'>
+				<h1 class='big_title'>
+					Our Work<br>
+				</h1>
+				<p>
+					We provide simple data solutions to people who need house renting information in Nanaimo.
+				</p>
+			</div>
+
+			<div class='work_exp'>
+				<img src='https://s3-us-west-2.amazonaws.com/visolutions/media/image/python.png'>
+				<h1 class='small_title'>
+					Python
+				</h1>
+				<p>
+					Manage complex interactions between database and website.
+				</p>
+				<p>
+					Scrape online data to create a dynamic webpage.
+				</p>
+			</div>
+	
+			<div class='work_exp'>
+				<img src='https://s3-us-west-2.amazonaws.com/visolutions/media/image/heroku.png'>
+				<h1 class='small_title'>
+					Heroku
+				</h1>
+				<p>
+					Launch simple apps.
+				</p>
+				<p>
+					Host dynamic websites.
+				</p>
+			</div>
+			
+			<div class='work_exp'>
+				<img src='https://s3-us-west-2.amazonaws.com/visolutions/media/image/aws.png'>
+				<h1 class='small_title'>
+					AWS
+				</h1>
+				<p>
+					Use s3 for data hosting.
+				</p>
+				<p>
+					RDS for a rock solid but low-cost database.
+				</p>
+				<p>
+					EC2 to run Apache.
+				</p>
+				<p>
+					Run R programs on your AWS instance.
+				</p>
+			</div>
+			
+		</div>
+		<div id='start_using' class='content_hide'>
+			this is an app<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+		</div>
+		<div id='info' class='content_hide'>
+			<br><br>
+			<h1 class='big_title'>We are a small IT team in Nanaimo, BC.</h1>
+			<div class='about_butt'>
+				<a href="http://www.vancouverislandsolutions.ca/#contact" target="_blank">Contect Us</a>
+			</div>
+		</div>
+	</div>
+	
+	<!-- bott -->
+	<div class='bott'>
+		<div class="footer-social-icons">
+			<ul class="social-icons">
+			<li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+			<li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+			<li><a href="" class="social-icon"> <i class="fa fa-rss"></i></a></li>
+			<li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+			<li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+			<li><a href="" class="social-icon"> <i class="fa fa-google-plus"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	
+</body>
