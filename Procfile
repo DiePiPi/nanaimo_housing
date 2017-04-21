@@ -1,1 +1,1 @@
-gunicorn visolutions.wsgi --log-file -
+web: gunicorn visolutions.wsgi --log-file -
