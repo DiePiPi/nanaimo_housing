@@ -48,7 +48,7 @@ body, html {
 	background-color:#c08283;
     opacity: 0.8;
 	}
-.bg_title:hover{
+.bg_title:hover {
 	opacity: 1;
 	cursor: pointer;
 }
@@ -318,6 +318,11 @@ ul.social-icons {
 		document.getElementById('start_using').setAttribute('class','content_hide');
 		document.getElementById('info').setAttribute('class','content_show');
 		}
+		
+	function show_topic(){
+		click_start_using();
+		window.location.href = '#tabframe';
+		}
 </script>
 
 </head>
@@ -325,13 +330,14 @@ ul.social-icons {
 <body>
 	<!-- background picture -->
 	<div class='bg'>
-		<div class='bg_title'>
-			NANAIMO HOUSING
-		</div>
+		<div class='bg_title' id='bg_title'>Nanaimo Housing</div>
+		<script>
+		document.getElementById('bg_title').addEventListener("click", show_topic);
+		</script>
 	</div>
 	
 	<!-- navigator tabs -->
-	<div class='tabframe'>
+	<div class='tabframe' id='tabframe'>
 		<div id='intro_tab' class='tabs_selected' onclick='click_intro();'>
 			Intro
 		</div>
@@ -403,6 +409,54 @@ ul.social-icons {
 		</div>
 		<div id='start_using' class='content_hide'>
 			this is an app<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
+			blablabla<br>
 			blablabla<br>
 			blablabla<br>
 			blablabla<br>
