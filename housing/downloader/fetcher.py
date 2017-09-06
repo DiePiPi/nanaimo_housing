@@ -50,4 +50,14 @@ def GetAdDetails( link ):
 	address = ad_tree.xpath('//th[contains(text(),"Address")]/following-sibling::td[not(self::a)]/text()')[0]
 	ad_id_tmp = ad_tree.xpath('//div[@id="Breadcrumb"]/strong')[0].text_content()
 	ad_id = re.split("Ad ID ", ad_id_tmp)[-1]
-	return ad_date, price, address, ad_id
+	description = ad_tree.xpath('//span[@itemprop="description"]')[0].text_content()
+	return ad_date, price, address, ad_id, description
+	
+def HarvestDescription( description ):
+	"""
+	Looking for bathrooms and bedrooms
+	"""
+	# make it lower case
+	desc = description.lower()
+	number_of_bed = desc.partition(' bedroom')[0].split(" ")[-1]
+	

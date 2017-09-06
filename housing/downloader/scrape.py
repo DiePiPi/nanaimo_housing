@@ -6,6 +6,7 @@
 from lxml import html
 import requests, cookielib
 from fetcher import *
+from gg_map import GetGGDistance
 
 cookie_jar = cookielib.MozillaCookieJar('kijiji.cookie')
 cookie_jar.load()
@@ -28,7 +29,21 @@ for page in pages_url:
 
 for rental in ad_url:
 	ad_date, price, address, ad_id = GetAdDetails( rental )
+	walk_duration, walk_distance = GetGGDistance( 
+		address, 
+		'viu, nanaimo',
+		mode = 'walking'
+		)
+	drive_duration, drive_distance = GetGGDistance( 
+		address, 
+		'viu, nanaimo',
+		mode = 'driving'
+		)
+	bus_duration, bus_distance = GetGGBus( address, 'viu, nanaimo' )
 	print [ad_date,price,address,ad_id]
+	
+	
+
 
 	
 
