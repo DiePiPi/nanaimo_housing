@@ -25,8 +25,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home),
     
-    url(r'^housing/$', include('housing.urls')),
-    url(r'^housing$', include('housing.urls')),
+    url(r'^housing/', include('housing.urls')),
     
     url(r'.*', nothing_here),
 ]
