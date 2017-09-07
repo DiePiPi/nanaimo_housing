@@ -14,3 +14,6 @@ def nothing_here(request):
 	
 def home(request):
 	return render(request, 'home.html', {'hello': 'Hello!'})
+
+def logo(request):
+	return render(request, 'logo.html')

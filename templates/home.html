@@ -1,13 +1,221 @@
 <!DOCTYPE html>
 
 <head>
-<title>Hello world!</title>
+<title>Welcome to Vancouver Island solutions</title>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link href="https://s3-us-west-2.amazonaws.com/visolutions/media/image/vsold3.png" rel="shortcut icon" type="image/x-icon"/>
+
+<style>
+body, html {
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin:0px;
+}
+.bg {
+    /* The image used */
+    background-image: url("https://s3-us-west-2.amazonaws.com/visolutions/media/image/homebg.jpeg");
+
+    /* Full height */
+    height: 100%;
+    margin: 0px;
+    padding:0px;
+    opacity: 1.0;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg_title {
+	font-size:36px;
+	color:#ffffff;
+	text-align: center;
+	width:700px;
+	position:relative;
+	top:30%;
+	margin:auto;
+	padding:5px;
+    opacity: 1.0;
+	}
+.space {
+	background-color:#ffffff;
+	height: 50%;
+    margin: 0px;
+    padding:0px;
+    opacity: 0.5;
+    -webkit-transition: display 1s; /* Safari */
+    transition: display 1s;
+	}
+.hide {
+	display:hidden;
+	}
+
+.section {
+	width:96%;
+	margin: 2%;
+    padding:0px;
+    height:375px;
+    /*
+    display: flex;
+    justify-content: space-between;
+    */
+	}
+.sectionf {
+	position: fixed;
+	}
+.sectionr {
+	position: related;
+	}
+#section1 {
+	top: 63%;
+    z-index: -1;
+	}
+#section2 {
+    position: related;
+	}
+.roundpic {
+	border-radius:32px;
+	opacity: 0.7;
+	}
+
+/*position*/
+.descriptions {
+	font-size:32px;
+	top:50%;
+	word-break: break-word;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	margin-right:3%;
+	margin-left:3%;
+	width: 40%;
+	vertical-align:top;
+	transform: translateY(160px);
+	}
+.pic {
+	max-width:47%;
+	max-height:92%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	margin-right:3%;
+	margin-left:3%;
+	}
+.left {
+	float: left;
+	}
+.right {
+	float: right;
+	}
+	
+/* unvisited link */
+a:link {
+	float:right;
+	margin-top:2%;
+	text-decoration: none;
+	font-weight: bold;
+    color: #809fff;
+    cursor: pointer;
+}
+
+/* visited link */
+a:visited {
+    color: #809fff;
+}
+
+/* mouse over link */
+a:hover {
+    color: #809fff;
+    -webkit-animation: mymove 1s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 1s infinite;
+}
+
+/* selected link */
+a:active {
+    color: #809fff;
+} 
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+    from {
+		text-shadow: 0px 0px #809fff;
+		font-size:32px;
+		}
+    to {
+		text-shadow: 0px -3px #e6ecff;
+		font-size:34px;
+		}
+}
+
+@keyframes mymove {
+    from {
+		text-shadow: 0px 0px #809fff;
+		font-size:32px;
+		}
+    to {
+		text-shadow: 0px -3px #e6ecff;
+		font-size:34px;
+		}
+}
+
+</style>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+    if (document.body.scrollTop > screen.height/3 || document.documentElement.scrollTop > screen.height/3) {
+        document.getElementById("space").className = "hide";
+        document.getElementById("section1").className = "section sectionr";
+    } else {
+        document.getElementById("space").className = "space";        
+        document.getElementById("section1").className = "section sectionf";
+    }
+}
+</script>
 
 </head>
 
 <body>
-	<div>
-	{{ hello }}
-	{{a}}
+	<div class='bg'>
+		<div class='bg_title'>Vancouver Island Solutions</div>
+	</div>
+	<div id='space' class='space'></div>
+	<div id='section1' class='section sectionf'>
+		<div class='descriptions left'>
+			We help your ideas and problems!
+			<a href='#'>Get Help <i class="fa fa-chevron-circle-right"></i></a>
+		</div>
+			<img class='roundpic pic right'src='https://s3-us-west-2.amazonaws.com/visolutions/media/image/ideas.jpeg'>
+
+	</div>
+	<div id='section2' class='section'>
+		<img class='roundpic pic left'src='https://s3-us-west-2.amazonaws.com/visolutions/media/image/create.jpeg'>
+		<div class='descriptions right'>
+			Do you have any plan, but wait for resources?
+			<a href='#'>Get Help <i class="fa fa-chevron-circle-right"></i></a>
+		</div>
+	</div>
+	<div id='section3' class='section'>
+		<div class='descriptions left'>
+			Technological issue hesitates you?
+			<a href='#'>Contect Us <i class="fa fa-chevron-circle-right"></i></a>
+		</div>
+		<img class='roundpic pic right'src='https://s3-us-west-2.amazonaws.com/visolutions/media/image/setting.jpeg'>
+	</div>
+	<div id='section4' class='section'>
+		<img class='roundpic pic left'src='https://s3-us-west-2.amazonaws.com/visolutions/media/image/marketing.jpeg'>
+		<div class='descriptions right'>
+			Developing online business?
+			<a href='#'>See Project We Helped <i class="fa fa-chevron-circle-right"></i></a>
+		</div>
+	</div>
+	<div id='section5' class='section'>
+		<div class='descriptions left'>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			Contect us now. <a href='#'>Contect Us <i class="fa fa-chevron-circle-right"></i></a>
+		</div>
+		<img class='roundpic pic right'src='https://s3-us-west-2.amazonaws.com/visolutions/media/image/weblane.jpeg'>
 	</div>
 </body>

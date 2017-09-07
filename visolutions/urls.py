@@ -18,12 +18,13 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from .views import home, nothing_here
+from .views import home, nothing_here, logo
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home),
+    url(r'^logo$', logo),
     
     url(r'^housing/', include('housing.urls')),
     
