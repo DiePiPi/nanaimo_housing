@@ -1,0 +1,36 @@
+
+
+<style>
+  @media screen and (max-width: 767px) {
+      .col-sm-3 {
+        display: none;
+      }
+
+  }
+    .affix {
+      top: 60px;
+  }
+  
+@media(max-width:767px){
+   .affix {
+     position: static;
+     width: auto;
+     top: 0;
+    }
+}
+
+<!-- Trick to offset the anchor to account for the fixed header -->
+h3{ position:relative; }
+div h3{
+    padding-top:60px;
+}
+<!-- Trick to offset the anchor to account for the fixed header -->
+</style>
+
+    <nav class="col-sm-3" id="myScrollspy">
+      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="200">
+        {% for label,id in divs %}
+            <li><a href="#{{id}}">{{label}}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>

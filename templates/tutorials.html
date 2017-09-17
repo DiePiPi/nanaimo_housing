@@ -1,0 +1,26 @@
+
+{% extends 'skeleton.html' %}
+{% load static %}
+
+{% block title %} Tutorials @ VI Solutions {% endblock %}
+
+{% block nav %}
+    {% include nav  %}
+{% endblock %}
+
+{% block title-section %}
+    <h1 style="color:black; font-size:32px">{{folder|title}}</h1>
+    <p>{{title_text}}</p>
+{% endblock %}
+
+{% block content %}
+    {% if html_file %}
+        {% include html_file %}
+    {% else %}
+        {% for link,name in body_content %}
+            <a class="w3-button w3-ripple" href="/{{folder}}/{{ link }}">{{name}}</a>
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}
+

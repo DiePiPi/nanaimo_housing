@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta name="description" content="Business, economics, and data analytics." />
+    <meta name="keywords" content="data analysics, data, analytics, business &amp; 
+    business, business analytics &amp; data analytics, analytics, viu, 
+    vancouver island university, johan latulippe, VI solutions canada, Canada, 
+    data analytics in Canada, vancouver island, vancouver, free, online, 
+    course, mba, free tutorial, howto, student, corporate, complex analytics,
+     learn analytics, learn, university, learn data, big data, data science, 
+     robust, education, understand, problem, solving, courses, island online analytics, 
+     need data, want tutorial, what I want, online tool, online tools, learn online, 
+     online courses, free, school, canada business, canada analytics, vancouver business, 
+     vancouver analytics, vancouver island analytics, business analytics nanaimo,
+      data analytics vancouver island, data analytics nanaimo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/homepage.css" %}">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% block extra_head %}{% endblock %}
+<title>{% block title %}VI Solutions{% endblock %}</title>
+
+</head>
+
+
+
+<!-- Custom Styles -->
+<style>
+    nav button.navbar-toggle .icon-bar {
+        background-color: black;
+        width: 16px;
+    }
+
+    .header-spacer {
+        height: 55px;
+        width:100%;
+        /*box-shadow: inset 3px 0px #2090FF;*/
+    }
+    section#intro,
+    .header-spacer {
+        background: #67ff6d;
+    }
+    section#title-section {
+        color: black;
+        background-color: #ff9a79;
+        padding: 40px 0;
+        box-shadow: 0 3px 3px rgba(0,0,0,.2);
+    }
+    img {max-width:  100%;}
+    
+    .navbar-header{
+    width:120px;
+    margin-top: -20px;
+    margin-left:0% !important;
+    }
+    .content{
+        margin-top:100px;
+    }
+</style>
+
+
+
+<body>
+<div id="container">
+    <div id="header">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><img src="{{ MEDIA_URL }}image/vsold3.png" height="80"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+              <li><a  href="/about/">About Us</a></li>
+            {% block nav %}
+            {% endblock %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </div>
+    
+    <div class="header-spacer"></div>
+    {% block section_body %}
+        
+        <section id="title-section" class="container-fluid">
+            <div class="row-fluid">
+                <div class="col-sm-9 col-md-8 col-md-offset-2 col-sm-offset-1">
+                    {% block title-section %}{% endblock %}
+                </div>
+            </div>
+        </section>
+
+        <div id="body" class="w3-container">
+            {% block content %}{% endblock %}
+        </div>
+    {% endblock %}
+
+    
+    <div id="footer">
+    <div class="w3-center">
+    {% block footer %}
+        <div class="w3-display-bottommiddle">
+        <p>Copyright @ VI Solutions 2017</p>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn" data-toggle="modal" 
+        data-target="#myModal">Terms & Conditions</button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog" >
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;
+                        </button>
+                        <h4 class="modal-title">vancouverislandsolutions.ca Terms of Service and Privacy 
+                        Policy</h4>
+                    </div>
+                    <div class="modal-body w3-left-align">
+                    {% include 'terms.html' %}
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close
+                </button>
+                </div>
+            </div>
+        </div>
+        </div>
+    {% endblock %}
+    </div> <!--close w3-center -->
+    </div> <!--close footer -->
+
+</div><!-- close container-->
+</body>
+</html>

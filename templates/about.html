@@ -1,0 +1,98 @@
+
+{% extends "skeleton.html" %}
+{% load static %}
+
+{% block title %} About us @ VI Solutions {% endblock %}
+
+{% block title-section %}
+<h1 style="color:black; font-size:32px">About Us</h1>
+What is it that we do?
+{% endblock %}
+
+{% block nav %}
+    {% include nav  %}
+{% endblock %}
+
+
+{% block content %}
+<div id ="purpose" class="content-section-a">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 text-center">
+                <br><br>
+                <img class="img-responsive center-block" src="{{ MEDIA_URL }}image/vsold3.png" alt="VI Solutions">
+            </div>
+            <div class="col-sm-8"  data-animation-delay="200">
+                <h3 class="section-heading">Our Purpose</h3>
+                <div class="sub-title lead3"><strong>
+                    Vancouver Island Solutions enables you and your team to deliver value quickly, 
+                    with high quality, using the tools that your employees love (or free open 
+                    source tool that we can customize for you).
+                    </strong>
+                </div>
+                <p class="lead">
+                    Vancouver Island Solutions provides insights for data-driven 
+                    enterprises, enabling them to support data analytics that can be quickly
+                    and robustly adapted to meet evolving requirements. Vancouver Island 
+                    Solutions is an information 
+                    technology (IT), data warehousing, data science and analytic team 
+                    who knows that in order to meet the needs of its customers, data 
+                    analytics has to be ten times more nimble and robust than it is today.
+                    <br><br>
+                    You know that the traditional slow and fragmented analytic process does
+                    not meet your needs. Your team needs an integrated database 
+                    updated daily, the ability to make changes to that database weekly, 
+                    and the confidence to use a customized dashboard to make changes real-time.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Our Leadership -->
+<div id="leadership" class="content-section-b" style="border-top: 0">
+    <div class="container">
+
+        <div class="text-center wrap_title">
+            <h2>VI Solutions Leadership</h2>
+            <p class="lead" style="margin-top:0">
+                VI Solutions's leadership has decades of operational, 
+                and hands-on experience working with data, data warehousing, data science, 
+                and enterprise and web software. Our collective goal is solve any data problem.
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 fadeInDown text-center">
+              <img width="100" height="100"  src="{{ MEDIA_URL }}images/johan.png" alt="Johan Latulippe">
+              <h3>Johan Latulippe, Project Manager, and Founder</h3>
+              <p class="lead">Data Scientist since 2003 - Big Data, MBA professor; Ph.D. Economics;
+              M.Sc.; University of Montreal, University of British Columbia, Vancouver Island University; 
+               </p>
+                <a href="mailto:johan@vancouverislandsolutions.ca?Subject=Hello%20Johan" target="_top">Send Mail</a>
+            </div>
+
+            <div class="col-sm-4 fadeInDown text-center">
+              <img width="100" height="100"  src="{{ MEDIA_URL }}images/sun.png" alt="Huan-Kai Sun">
+              <h3>Huan-Kai Sun, Design Manager, and Founder</h3>
+              <p class="lead">
+              Name of some past employers;
+              Name of some past universities;  
+              Vancouver Island University  </p>
+           </div>
+
+            <div class="col-sm-4 fadeInDown text-center">
+              <img width="100" height="100"  src="{{ MEDIA_URL }}images/rob.png" alt="Rob Chauhan">
+              <h3>Rob Chauhan, Services</h3>
+              <p class="lead">
+              Electrical and Electronics Engineering - B.Tech.; Peer Mentor; MBA; MScIM; 
+              Vancouver Island University, National Institute of Technology Karnataka,
+               University of Hertfordshire  </p>
+                <a href="https://www.linkedin.com/in/saurabh-rob-chauhan-54333097"><i class="fa fa-linkedin-square fa-2x"> </i> </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
