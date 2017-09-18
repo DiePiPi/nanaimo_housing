@@ -59,14 +59,14 @@
     }
     img {max-width:  100%;}
     
-    .navbar-header{
-    width:120px;
+
+
+    .navbar-brand{
+    width:200px;
     margin-top: -20px;
     margin-left:0% !important;
     }
-    .content{
-        margin-top:100px;
-    }
+
 </style>
 
 
@@ -85,7 +85,7 @@
           <a class="navbar-brand" href="/"><img src="{{ MEDIA_URL }}image/vsold3.png" height="80"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav navbar-right">
               <li><a  href="/about/">About Us</a></li>
             {% block nav %}
             {% endblock %}
